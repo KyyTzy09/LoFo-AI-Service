@@ -9,7 +9,7 @@ class GeminiClient:
     def __init__(
         self,
         gemini_model_name: str = "gemini-2.5-flash",
-        gemini_fallback_name: str = "gemini-3-flash",
+        gemini_fallback_name: str = "gemini-2.5-flash-lite",
         temperature: float = 0.6,
         max_output_tokens: int = 2021,
         root_prompt: str = load_prompt("root_prompt.prompt"),

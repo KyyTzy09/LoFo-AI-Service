@@ -32,14 +32,6 @@
         "documentation": {}
     },
     {
-        "label": "load_prompt",
-        "importPath": "app.ai.llm.loader",
-        "description": "app.ai.llm.loader",
-        "isExtraImport": true,
-        "detail": "app.ai.llm.loader",
-        "documentation": {}
-    },
-    {
         "label": "settings",
         "importPath": "app.configs.config",
         "description": "app.configs.config",
@@ -160,60 +152,19 @@
         "documentation": {}
     },
     {
-        "label": "aiClient",
-        "importPath": "app.ai.llm.client",
-        "description": "app.ai.llm.client",
-        "isExtraImport": true,
-        "detail": "app.ai.llm.client",
-        "documentation": {}
-    },
-    {
-        "label": "aiClient",
-        "importPath": "app.ai.llm.client",
-        "description": "app.ai.llm.client",
-        "isExtraImport": true,
-        "detail": "app.ai.llm.client",
-        "documentation": {}
-    },
-    {
-        "label": "json",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "json",
-        "description": "json",
-        "detail": "json",
-        "documentation": {}
-    },
-    {
-        "label": "BaseModel",
-        "importPath": "pydantic",
-        "description": "pydantic",
-        "isExtraImport": true,
-        "detail": "pydantic",
-        "documentation": {}
-    },
-    {
-        "label": "BaseModel",
-        "importPath": "pydantic",
-        "description": "pydantic",
-        "isExtraImport": true,
-        "detail": "pydantic",
-        "documentation": {}
-    },
-    {
-        "label": "BaseModel",
-        "importPath": "pydantic",
-        "description": "pydantic",
-        "isExtraImport": true,
-        "detail": "pydantic",
-        "documentation": {}
-    },
-    {
         "label": "AnnouncementsService",
         "importPath": "app.api.services.announcements_service",
         "description": "app.api.services.announcements_service",
         "isExtraImport": true,
         "detail": "app.api.services.announcements_service",
+        "documentation": {}
+    },
+    {
+        "label": "createAnnouncementRequest",
+        "importPath": "app.models.announcements",
+        "description": "app.models.announcements",
+        "isExtraImport": true,
+        "detail": "app.models.announcements",
         "documentation": {}
     },
     {
@@ -241,6 +192,23 @@
         "documentation": {}
     },
     {
+        "label": "CreateAnnouncementConverter",
+        "importPath": "app.helpers.announcement_converter",
+        "description": "app.helpers.announcement_converter",
+        "isExtraImport": true,
+        "detail": "app.helpers.announcement_converter",
+        "documentation": {}
+    },
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
         "label": "datetime",
         "importPath": "datetime",
         "description": "datetime",
@@ -254,6 +222,14 @@
         "description": "datetime",
         "isExtraImport": true,
         "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "aiClient",
+        "importPath": "app.ai.llm.client",
+        "description": "app.ai.llm.client",
+        "isExtraImport": true,
+        "detail": "app.ai.llm.client",
         "documentation": {}
     },
     {
@@ -338,6 +314,30 @@
         "documentation": {}
     },
     {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
         "label": "ItemModel",
         "importPath": "app.models.item_model",
         "description": "app.models.item_model",
@@ -383,7 +383,7 @@
         "kind": 6,
         "importPath": "app.ai.llm.client",
         "description": "app.ai.llm.client",
-        "peekOfCode": "class GeminiClient:\n    def __init__(\n        self,\n        gemini_model_name: str = \"gemini-2.5-flash\",\n        gemini_fallback_name: str = \"gemini-3-flash\",\n        temperature: float = 0.6,\n        max_output_tokens: int = 2021,\n        root_prompt: str = load_prompt(\"root_prompt.prompt\"),\n    ):\n        self.temperature = temperature",
+        "peekOfCode": "class GeminiClient:\n    def __init__(\n        self,\n        gemini_model_name: str = \"gemini-2.5-flash\",\n        gemini_fallback_name: str = \"gemini-2.5-flash-lite\",\n        temperature: float = 0.6,\n        max_output_tokens: int = 2021,\n        root_prompt: str = load_prompt(\"root_prompt.prompt\"),\n    ):\n        self.temperature = temperature",
         "detail": "app.ai.llm.client",
         "documentation": {}
     },
@@ -419,7 +419,7 @@
         "kind": 2,
         "importPath": "app.api.controllers.announcements",
         "description": "app.api.controllers.announcements",
-        "peekOfCode": "def create_announcement(request: createAnnouncementRequest, _: bool = Depends(verify_token), service: AnnouncementsService = Depends()):\n    try :\n        response = service.create_announcement_with_voice(request)\n        return {\"message\": \"announcement generated successfully\", \"success\": True, \"data\" : response } \n    except Exception as e:\n            raise HTTPException(500, str(e))",
+        "peekOfCode": "def create_announcement(request: createAnnouncementRequest, _: bool = Depends(verify_token), service: AnnouncementsService = Depends()):\n    converter = CreateAnnouncementConverter(request)\n    try :\n        payload = converter.convert()\n        response = service.create_announcement_with_voice(payload)\n        return {\"message\": \"announcement generated successfully\", \"success\": True, \"data\" : response } \n    except Exception as e:\n            raise HTTPException(500, str(e))",
         "detail": "app.api.controllers.announcements",
         "documentation": {}
     },
@@ -428,7 +428,7 @@
         "kind": 5,
         "importPath": "app.api.controllers.announcements",
         "description": "app.api.controllers.announcements",
-        "peekOfCode": "announcements_router = APIRouter()\n@announcements_router.post(\"/create-voice\")\ndef create_announcement(request: createAnnouncementRequest, _: bool = Depends(verify_token), service: AnnouncementsService = Depends()):\n    try :\n        response = service.create_announcement_with_voice(request)\n        return {\"message\": \"announcement generated successfully\", \"success\": True, \"data\" : response } \n    except Exception as e:\n            raise HTTPException(500, str(e))",
+        "peekOfCode": "announcements_router = APIRouter()\n@announcements_router.post(\"/create-voice\")\ndef create_announcement(request: createAnnouncementRequest, _: bool = Depends(verify_token), service: AnnouncementsService = Depends()):\n    converter = CreateAnnouncementConverter(request)\n    try :\n        payload = converter.convert()\n        response = service.create_announcement_with_voice(payload)\n        return {\"message\": \"announcement generated successfully\", \"success\": True, \"data\" : response } \n    except Exception as e:\n            raise HTTPException(500, str(e))",
         "detail": "app.api.controllers.announcements",
         "documentation": {}
     },
@@ -437,7 +437,7 @@
         "kind": 6,
         "importPath": "app.api.services.announcements_service",
         "description": "app.api.services.announcements_service",
-        "peekOfCode": "class AnnouncementsService:\n    def __init__(self):\n        # Initialize any necessary resources, such as database connections\n        pass\n    def create_announcement_with_voice(self, payload: createAnnouncementRequest):\n        try:\n            wib = pytz.timezone(\"Asia/Jakarta\")\n            now = datetime.now(wib).isoformat()\n            today = GetDay(datetime.now(wib))\n            prompt_tmplt = load_prompt(\"create_announcement.prompt\")",
+        "peekOfCode": "class AnnouncementsService:\n    def __init__(self):\n        # Initialize any necessary resources, such as database connections\n        pass\n    def create_announcement_with_voice(self, payload: dict):\n        try:\n            wib = pytz.timezone(\"Asia/Jakarta\")\n            now = datetime.now(wib).isoformat()\n            today = GetDay(datetime.now(wib))\n            prompt_tmplt = load_prompt(\"create_announcement.prompt\")",
         "detail": "app.api.services.announcements_service",
         "documentation": {}
     },
@@ -493,6 +493,24 @@
         "description": "app.deps.deps",
         "peekOfCode": "def verify_token(authorization: str = Header(...)):\n    if not authorization.startswith(\"Bearer \"):\n        raise HTTPException(\n            status_code=status.HTTP_401_UNAUTHORIZED, detail=\"Bearer Required\"\n        )\n    token = authorization.replace(\"Bearer \", \"\")\n    if token != settings.secret_token:\n        raise HTTPException(\n            status_code=status.HTTP_401_UNAUTHORIZED, detail=\"Invalid token\"\n        )",
         "detail": "app.deps.deps",
+        "documentation": {}
+    },
+    {
+        "label": "AIItem",
+        "kind": 6,
+        "importPath": "app.helpers.announcement_converter",
+        "description": "app.helpers.announcement_converter",
+        "peekOfCode": "class AIItem(BaseModel):\n    itemId: str\n    item_name: str\n    item_info: str\nclass CreateAnnouncementConverter:\n    def __init__(self, request: createAnnouncementRequest):\n        self.request = request\n    def map_items(self):\n        items = self.request.items or []\n        return [",
+        "detail": "app.helpers.announcement_converter",
+        "documentation": {}
+    },
+    {
+        "label": "CreateAnnouncementConverter",
+        "kind": 6,
+        "importPath": "app.helpers.announcement_converter",
+        "description": "app.helpers.announcement_converter",
+        "peekOfCode": "class CreateAnnouncementConverter:\n    def __init__(self, request: createAnnouncementRequest):\n        self.request = request\n    def map_items(self):\n        items = self.request.items or []\n        return [\n            AIItem(\n                itemId=item.itemId,\n                item_name=item.item_name,\n                item_info=item.item_info",
+        "detail": "app.helpers.announcement_converter",
         "documentation": {}
     },
     {

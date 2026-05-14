@@ -15,7 +15,7 @@ class AnnouncementsService:
         pass
 
 
-    def create_announcement_with_voice(self, payload: createAnnouncementRequest):
+    def create_announcement_with_voice(self, payload: dict):
         try:
             wib = pytz.timezone("Asia/Jakarta")
             now = datetime.now(wib).isoformat()
@@ -24,7 +24,7 @@ class AnnouncementsService:
             prompt_tmplt = load_prompt("create_announcement.prompt")
             prompt = prompt_tmplt.replace(
                 "{{payload_json}}",
-                json.dumps(payload.model_dump(), ensure_ascii=False, indent=2)
+                json.dumps(payload, ensure_ascii=False, indent=2)
             ).replace(
                 "{{current_time}}",
                 now
@@ -35,8 +35,8 @@ class AnnouncementsService:
         
             response = model.generate(prompt)
             clean = response.replace("```json", "").replace("```", "").strip()
-            result = json.loads(clean)
             
+            result = json.loads(clean)
             return result
         except Exception as e:
             raise Exception(f"Failed to create announcement: {str(e)}")
