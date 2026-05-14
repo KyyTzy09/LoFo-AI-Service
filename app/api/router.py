@@ -1,5 +1,5 @@
 from fastapi import APIRouter
-from app.api.announcements.announcements import announcements_router
+from app.api.controllers.announcements import announcements_router
 
 api_router = APIRouter()
 

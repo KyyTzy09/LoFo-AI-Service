@@ -32,6 +32,22 @@
         "documentation": {}
     },
     {
+        "label": "load_prompt",
+        "importPath": "app.ai.llm.loader",
+        "description": "app.ai.llm.loader",
+        "isExtraImport": true,
+        "detail": "app.ai.llm.loader",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "app.configs.config",
+        "description": "app.configs.config",
+        "isExtraImport": true,
+        "detail": "app.configs.config",
+        "documentation": {}
+    },
+    {
         "label": "settings",
         "importPath": "app.configs.config",
         "description": "app.configs.config",
@@ -104,6 +120,30 @@
         "documentation": {}
     },
     {
+        "label": "Header",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "HTTPException",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "status",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
         "label": "FastAPI",
         "importPath": "fastapi",
         "description": "fastapi",
@@ -128,6 +168,23 @@
         "documentation": {}
     },
     {
+        "label": "aiClient",
+        "importPath": "app.ai.llm.client",
+        "description": "app.ai.llm.client",
+        "isExtraImport": true,
+        "detail": "app.ai.llm.client",
+        "documentation": {}
+    },
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
         "label": "BaseModel",
         "importPath": "pydantic",
         "description": "pydantic",
@@ -136,11 +193,116 @@
         "documentation": {}
     },
     {
-        "label": "announcements_router",
-        "importPath": "app.api.announcements.announcements",
-        "description": "app.api.announcements.announcements",
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
         "isExtraImport": true,
-        "detail": "app.api.announcements.announcements",
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "AnnouncementsService",
+        "importPath": "app.api.services.announcements_service",
+        "description": "app.api.services.announcements_service",
+        "isExtraImport": true,
+        "detail": "app.api.services.announcements_service",
+        "documentation": {}
+    },
+    {
+        "label": "createAnnouncementRequest",
+        "importPath": "app.models.announcements",
+        "description": "app.models.announcements",
+        "isExtraImport": true,
+        "detail": "app.models.announcements",
+        "documentation": {}
+    },
+    {
+        "label": "createAnnouncementRequest",
+        "importPath": "app.models.announcements",
+        "description": "app.models.announcements",
+        "isExtraImport": true,
+        "detail": "app.models.announcements",
+        "documentation": {}
+    },
+    {
+        "label": "verify_token",
+        "importPath": "app.deps.deps",
+        "description": "app.deps.deps",
+        "isExtraImport": true,
+        "detail": "app.deps.deps",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "pytz",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pytz",
+        "description": "pytz",
+        "detail": "pytz",
+        "documentation": {}
+    },
+    {
+        "label": "GetDay",
+        "importPath": "app.helpers.date_helper",
+        "description": "app.helpers.date_helper",
+        "isExtraImport": true,
+        "detail": "app.helpers.date_helper",
+        "documentation": {}
+    },
+    {
+        "label": "announcements_router",
+        "importPath": "app.api.controllers.announcements",
+        "description": "app.api.controllers.announcements",
+        "isExtraImport": true,
+        "detail": "app.api.controllers.announcements",
         "documentation": {}
     },
     {
@@ -173,6 +335,30 @@
         "description": "pydantic_settings",
         "isExtraImport": true,
         "detail": "pydantic_settings",
+        "documentation": {}
+    },
+    {
+        "label": "ItemModel",
+        "importPath": "app.models.item_model",
+        "description": "app.models.item_model",
+        "isExtraImport": true,
+        "detail": "app.models.item_model",
+        "documentation": {}
+    },
+    {
+        "label": "Enum",
+        "importPath": "enum",
+        "description": "enum",
+        "isExtraImport": true,
+        "detail": "enum",
+        "documentation": {}
+    },
+    {
+        "label": "ItemStatus",
+        "importPath": "app.models.enums",
+        "description": "app.models.enums",
+        "isExtraImport": true,
+        "detail": "app.models.enums",
         "documentation": {}
     },
     {
@@ -229,30 +415,30 @@
         "documentation": {}
     },
     {
-        "label": "AnnouncementRequest",
-        "kind": 6,
-        "importPath": "app.api.announcements.announcements",
-        "description": "app.api.announcements.announcements",
-        "peekOfCode": "class AnnouncementRequest(BaseModel):\n    prompt: str\n@announcements_router.post(\"/create-voice\")\ndef create_announcement(request: AnnouncementRequest ):\n    try :\n        prompt = request.prompt\n        response = model.generate(prompt)\n        return {\"message\": response, \"success\": True} \n    except Exception as e:\n            raise HTTPException(500, str(e))",
-        "detail": "app.api.announcements.announcements",
-        "documentation": {}
-    },
-    {
         "label": "create_announcement",
         "kind": 2,
-        "importPath": "app.api.announcements.announcements",
-        "description": "app.api.announcements.announcements",
-        "peekOfCode": "def create_announcement(request: AnnouncementRequest ):\n    try :\n        prompt = request.prompt\n        response = model.generate(prompt)\n        return {\"message\": response, \"success\": True} \n    except Exception as e:\n            raise HTTPException(500, str(e))",
-        "detail": "app.api.announcements.announcements",
+        "importPath": "app.api.controllers.announcements",
+        "description": "app.api.controllers.announcements",
+        "peekOfCode": "def create_announcement(request: createAnnouncementRequest, _: bool = Depends(verify_token), service: AnnouncementsService = Depends()):\n    try :\n        response = service.create_announcement_with_voice(request)\n        return {\"message\": \"announcement generated successfully\", \"success\": True, \"data\" : response } \n    except Exception as e:\n            raise HTTPException(500, str(e))",
+        "detail": "app.api.controllers.announcements",
         "documentation": {}
     },
     {
         "label": "announcements_router",
         "kind": 5,
-        "importPath": "app.api.announcements.announcements",
-        "description": "app.api.announcements.announcements",
-        "peekOfCode": "announcements_router = APIRouter()\nclass AnnouncementRequest(BaseModel):\n    prompt: str\n@announcements_router.post(\"/create-voice\")\ndef create_announcement(request: AnnouncementRequest ):\n    try :\n        prompt = request.prompt\n        response = model.generate(prompt)\n        return {\"message\": response, \"success\": True} \n    except Exception as e:",
-        "detail": "app.api.announcements.announcements",
+        "importPath": "app.api.controllers.announcements",
+        "description": "app.api.controllers.announcements",
+        "peekOfCode": "announcements_router = APIRouter()\n@announcements_router.post(\"/create-voice\")\ndef create_announcement(request: createAnnouncementRequest, _: bool = Depends(verify_token), service: AnnouncementsService = Depends()):\n    try :\n        response = service.create_announcement_with_voice(request)\n        return {\"message\": \"announcement generated successfully\", \"success\": True, \"data\" : response } \n    except Exception as e:\n            raise HTTPException(500, str(e))",
+        "detail": "app.api.controllers.announcements",
+        "documentation": {}
+    },
+    {
+        "label": "AnnouncementsService",
+        "kind": 6,
+        "importPath": "app.api.services.announcements_service",
+        "description": "app.api.services.announcements_service",
+        "peekOfCode": "class AnnouncementsService:\n    def __init__(self):\n        # Initialize any necessary resources, such as database connections\n        pass\n    def create_announcement_with_voice(self, payload: createAnnouncementRequest):\n        try:\n            wib = pytz.timezone(\"Asia/Jakarta\")\n            now = datetime.now(wib).isoformat()\n            today = GetDay(datetime.now(wib))\n            prompt_tmplt = load_prompt(\"create_announcement.prompt\")",
+        "detail": "app.api.services.announcements_service",
         "documentation": {}
     },
     {
@@ -298,6 +484,60 @@
         "description": "app.configs.config",
         "peekOfCode": "settings = Settings()",
         "detail": "app.configs.config",
+        "documentation": {}
+    },
+    {
+        "label": "verify_token",
+        "kind": 2,
+        "importPath": "app.deps.deps",
+        "description": "app.deps.deps",
+        "peekOfCode": "def verify_token(authorization: str = Header(...)):\n    if not authorization.startswith(\"Bearer \"):\n        raise HTTPException(\n            status_code=status.HTTP_401_UNAUTHORIZED, detail=\"Bearer Required\"\n        )\n    token = authorization.replace(\"Bearer \", \"\")\n    if token != settings.secret_token:\n        raise HTTPException(\n            status_code=status.HTTP_401_UNAUTHORIZED, detail=\"Invalid token\"\n        )",
+        "detail": "app.deps.deps",
+        "documentation": {}
+    },
+    {
+        "label": "GetDay",
+        "kind": 2,
+        "importPath": "app.helpers.date_helper",
+        "description": "app.helpers.date_helper",
+        "peekOfCode": "def GetDay(date: datetime):\n    dayInt = date.weekday()\n    day = \"\"\n    match dayInt:\n        case 0:\n            day = \"Senin\"\n        case 1:\n            day = \"Selasa\"\n        case 2:\n            day = \"Rabu\"",
+        "detail": "app.helpers.date_helper",
+        "documentation": {}
+    },
+    {
+        "label": "Announcement",
+        "kind": 6,
+        "importPath": "app.models.announcements",
+        "description": "app.models.announcements",
+        "peekOfCode": "class Announcement(BaseModel):\n    announcementId: str\n    title: str\n    description: str\n    location: str\n    lost_at: str\n    user_id: str\n    item_id: Optional[str] \n    created_at: str\n    updated_at: str",
+        "detail": "app.models.announcements",
+        "documentation": {}
+    },
+    {
+        "label": "createAnnouncementRequest",
+        "kind": 6,
+        "importPath": "app.models.announcements",
+        "description": "app.models.announcements",
+        "peekOfCode": "class createAnnouncementRequest(BaseModel):\n    text: str\n    connect_item: bool\n    items: Optional[List[ItemModel]]",
+        "detail": "app.models.announcements",
+        "documentation": {}
+    },
+    {
+        "label": "ItemStatus",
+        "kind": 6,
+        "importPath": "app.models.enums",
+        "description": "app.models.enums",
+        "peekOfCode": "class ItemStatus(Enum):\n    HILANG = \"HILANG\"\n    TERSEDIA = \"TERSEDIA\"",
+        "detail": "app.models.enums",
+        "documentation": {}
+    },
+    {
+        "label": "ItemModel",
+        "kind": 6,
+        "importPath": "app.models.item_model",
+        "description": "app.models.item_model",
+        "peekOfCode": "class ItemModel(BaseModel):\n    itemId: str\n    item_name: str\n    item_info: str\n    image : str\n    status: str\n    user_id: str\n    qr_url: str\n    created_at: str\n    updated_at: str",
+        "detail": "app.models.item_model",
         "documentation": {}
     },
     {
