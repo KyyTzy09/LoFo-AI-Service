@@ -1,0 +1,321 @@
+[
+    {
+        "label": "genai",
+        "importPath": "google",
+        "description": "google",
+        "isExtraImport": true,
+        "detail": "google",
+        "documentation": {}
+    },
+    {
+        "label": "types",
+        "importPath": "google.genai",
+        "description": "google.genai",
+        "isExtraImport": true,
+        "detail": "google.genai",
+        "documentation": {}
+    },
+    {
+        "label": "load_prompt",
+        "importPath": "app.ai.llm.loader",
+        "description": "app.ai.llm.loader",
+        "isExtraImport": true,
+        "detail": "app.ai.llm.loader",
+        "documentation": {}
+    },
+    {
+        "label": "load_prompt",
+        "importPath": "app.ai.llm.loader",
+        "description": "app.ai.llm.loader",
+        "isExtraImport": true,
+        "detail": "app.ai.llm.loader",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "app.configs.config",
+        "description": "app.configs.config",
+        "isExtraImport": true,
+        "detail": "app.configs.config",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "app.configs.config",
+        "description": "app.configs.config",
+        "isExtraImport": true,
+        "detail": "app.configs.config",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "lru_cache",
+        "importPath": "functools",
+        "description": "functools",
+        "isExtraImport": true,
+        "detail": "functools",
+        "documentation": {}
+    },
+    {
+        "label": "APIRouter",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Depends",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "HTTPException",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "APIRouter",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "FastAPI",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "FastAPI",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "aiClient",
+        "importPath": "app.ai.llm.client",
+        "description": "app.ai.llm.client",
+        "isExtraImport": true,
+        "detail": "app.ai.llm.client",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "announcements_router",
+        "importPath": "app.api.announcements.announcements",
+        "description": "app.api.announcements.announcements",
+        "isExtraImport": true,
+        "detail": "app.api.announcements.announcements",
+        "documentation": {}
+    },
+    {
+        "label": "load_dotenv",
+        "importPath": "dotenv",
+        "description": "dotenv",
+        "isExtraImport": true,
+        "detail": "dotenv",
+        "documentation": {}
+    },
+    {
+        "label": "load_dotenv",
+        "importPath": "dotenv",
+        "description": "dotenv",
+        "isExtraImport": true,
+        "detail": "dotenv",
+        "documentation": {}
+    },
+    {
+        "label": "BaseSettings",
+        "importPath": "pydantic_settings",
+        "description": "pydantic_settings",
+        "isExtraImport": true,
+        "detail": "pydantic_settings",
+        "documentation": {}
+    },
+    {
+        "label": "SettingsConfigDict",
+        "importPath": "pydantic_settings",
+        "description": "pydantic_settings",
+        "isExtraImport": true,
+        "detail": "pydantic_settings",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "api_router",
+        "importPath": "app.api.router",
+        "description": "app.api.router",
+        "isExtraImport": true,
+        "detail": "app.api.router",
+        "documentation": {}
+    },
+    {
+        "label": "GeminiClient",
+        "kind": 6,
+        "importPath": "app.ai.llm.client",
+        "description": "app.ai.llm.client",
+        "peekOfCode": "class GeminiClient:\n    def __init__(\n        self,\n        gemini_model_name: str = \"gemini-2.5-flash\",\n        gemini_fallback_name: str = \"gemini-3-flash\",\n        temperature: float = 0.6,\n        max_output_tokens: int = 2021,\n        root_prompt: str = load_prompt(\"root_prompt.prompt\"),\n    ):\n        self.temperature = temperature",
+        "detail": "app.ai.llm.client",
+        "documentation": {}
+    },
+    {
+        "label": "aiClient",
+        "kind": 5,
+        "importPath": "app.ai.llm.client",
+        "description": "app.ai.llm.client",
+        "peekOfCode": "aiClient = GeminiClient()",
+        "detail": "app.ai.llm.client",
+        "documentation": {}
+    },
+    {
+        "label": "load_prompt",
+        "kind": 2,
+        "importPath": "app.ai.llm.loader",
+        "description": "app.ai.llm.loader",
+        "peekOfCode": "def load_prompt(filename: str) -> str:\n    path = BASE_DIR / filename\n    if not path.exists():\n        raise FileNotFoundError(f\"Root Prompt not found {filename}\")\n    return path.read_text(encoding=\"utf-8\")",
+        "detail": "app.ai.llm.loader",
+        "documentation": {}
+    },
+    {
+        "label": "BASE_DIR",
+        "kind": 5,
+        "importPath": "app.ai.llm.loader",
+        "description": "app.ai.llm.loader",
+        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parents[1] / \"prompts\"\n@lru_cache(maxsize=32)\ndef load_prompt(filename: str) -> str:\n    path = BASE_DIR / filename\n    if not path.exists():\n        raise FileNotFoundError(f\"Root Prompt not found {filename}\")\n    return path.read_text(encoding=\"utf-8\")",
+        "detail": "app.ai.llm.loader",
+        "documentation": {}
+    },
+    {
+        "label": "AnnouncementRequest",
+        "kind": 6,
+        "importPath": "app.api.announcements.announcements",
+        "description": "app.api.announcements.announcements",
+        "peekOfCode": "class AnnouncementRequest(BaseModel):\n    prompt: str\n@announcements_router.post(\"/create-voice\")\ndef create_announcement(request: AnnouncementRequest ):\n    try :\n        prompt = request.prompt\n        response = model.generate(prompt)\n        return {\"message\": response, \"success\": True} \n    except Exception as e:\n            raise HTTPException(500, str(e))",
+        "detail": "app.api.announcements.announcements",
+        "documentation": {}
+    },
+    {
+        "label": "create_announcement",
+        "kind": 2,
+        "importPath": "app.api.announcements.announcements",
+        "description": "app.api.announcements.announcements",
+        "peekOfCode": "def create_announcement(request: AnnouncementRequest ):\n    try :\n        prompt = request.prompt\n        response = model.generate(prompt)\n        return {\"message\": response, \"success\": True} \n    except Exception as e:\n            raise HTTPException(500, str(e))",
+        "detail": "app.api.announcements.announcements",
+        "documentation": {}
+    },
+    {
+        "label": "announcements_router",
+        "kind": 5,
+        "importPath": "app.api.announcements.announcements",
+        "description": "app.api.announcements.announcements",
+        "peekOfCode": "announcements_router = APIRouter()\nclass AnnouncementRequest(BaseModel):\n    prompt: str\n@announcements_router.post(\"/create-voice\")\ndef create_announcement(request: AnnouncementRequest ):\n    try :\n        prompt = request.prompt\n        response = model.generate(prompt)\n        return {\"message\": response, \"success\": True} \n    except Exception as e:",
+        "detail": "app.api.announcements.announcements",
+        "documentation": {}
+    },
+    {
+        "label": "Pong",
+        "kind": 2,
+        "importPath": "app.api.router",
+        "description": "app.api.router",
+        "peekOfCode": "def Pong():\n    return {\"message\": \"Pong\", \"success\": True}\n@api_router.get(\"/test\")\ndef test():\n    return {\"message\": \"Siam mokel\", \"success\": True}",
+        "detail": "app.api.router",
+        "documentation": {}
+    },
+    {
+        "label": "test",
+        "kind": 2,
+        "importPath": "app.api.router",
+        "description": "app.api.router",
+        "peekOfCode": "def test():\n    return {\"message\": \"Siam mokel\", \"success\": True}",
+        "detail": "app.api.router",
+        "documentation": {}
+    },
+    {
+        "label": "api_router",
+        "kind": 5,
+        "importPath": "app.api.router",
+        "description": "app.api.router",
+        "peekOfCode": "api_router = APIRouter()\napi_router.include_router(announcements_router, prefix=\"/announcements\", tags=[\"announcements\"])\n@api_router.get(\"/ping\")\ndef Pong():\n    return {\"message\": \"Pong\", \"success\": True}\n@api_router.get(\"/test\")\ndef test():\n    return {\"message\": \"Siam mokel\", \"success\": True}",
+        "detail": "app.api.router",
+        "documentation": {}
+    },
+    {
+        "label": "Settings",
+        "kind": 6,
+        "importPath": "app.configs.config",
+        "description": "app.configs.config",
+        "peekOfCode": "class Settings(BaseSettings):\n    app_name: str = \"\"\n    env: str = \"\"\n    secret_token: str = \"LoFo-AI-API\"\n    gemini_api_key: str = \"\"\n    openai_api_key: str = \"\"\n    openai_temperature: float = 0.6\n    model_config = SettingsConfigDict(env_file=\".env\", extra=\"ignore\")\nsettings = Settings()",
+        "detail": "app.configs.config",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "kind": 5,
+        "importPath": "app.configs.config",
+        "description": "app.configs.config",
+        "peekOfCode": "settings = Settings()",
+        "detail": "app.configs.config",
+        "documentation": {}
+    },
+    {
+        "label": "PROJECT_ROOT",
+        "kind": 5,
+        "importPath": "app.main",
+        "description": "app.main",
+        "peekOfCode": "PROJECT_ROOT = Path(__file__).resolve().parent.parent\nif str(PROJECT_ROOT) not in sys.path:\n    sys.path.insert(0, str(PROJECT_ROOT))\nload_dotenv(PROJECT_ROOT / \".env\")\napp = FastAPI(title=settings.app_name)\napp.include_router(api_router, prefix=\"/api\")",
+        "detail": "app.main",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "app.main",
+        "description": "app.main",
+        "peekOfCode": "app = FastAPI(title=settings.app_name)\napp.include_router(api_router, prefix=\"/api\")",
+        "detail": "app.main",
+        "documentation": {}
+    }
+]
