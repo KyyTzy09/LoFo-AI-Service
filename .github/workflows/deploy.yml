@@ -1,0 +1,42 @@
+name: Deploy LoFo AI Service Production
+
+on:
+  push:
+    branches: ["main"]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Deploy to VPS via SSH
+        uses: appleboy/ssh-action@v0.1.7
+        with:
+          host: ${{ secrets.VPS_HOST }}
+          username: ${{ secrets.VPS_USER }}
+          key: ${{ secrets.VPS_KEY }}
+          script: |
+            set -e
+
+            # 1. Masuk ke folder root tempat docker-compose berada
+            cd ~/lofo-project
+
+            # 2. Masuk ke subfolder ai-service, lalu sync kodingan terbaru
+            cd ai-service
+            echo "🔄 Syncing FastAPI source code..."
+            git fetch origin main
+            git reset --hard origin/main
+            
+            # 3. Kembali ke root untuk eksekusi Docker Compose
+            cd ~/lofo-project
+            echo "🐳 Rebuilding FastAPI Container..."
+            sudo docker compose --env-file ./laravel/.env.production up -d --build --no-deps ai-service
+
+            # 4. Bersihkan cache image sampah sisa build
+            echo "🧹 Cleaning up unused Docker images..."
+            sudo docker image prune -f
+
+            echo "🚀 ✅ AI Service successfully updated!"
