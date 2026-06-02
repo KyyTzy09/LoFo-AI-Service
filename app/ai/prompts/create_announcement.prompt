@@ -102,14 +102,11 @@ Jangan mengarang informasi yang tidak ada di text
 
 CURRENT TIME
 Waktu sekarang adalah: {{current_time}} dan hari ini adalah {{today}}
-Gunakan waktu ini sebagai referensi untuk:
+Gunakan waktu ini sebagai referensi untuk konversi waktu.
 
-kemarin
-tadi
-jam tertentu
-tanggal tertentu
-hari tertentu
-fallback waktu sekarang jika tidak disebutkan
-JSON_INPUT
-
+BERIKUT ADALAH DATA INPUT YANG WAJIB ANDA PARSE:
+<json_input>
 {{payload_json}}
+</json_input>
+
+Ingat batasan keras: JANGAN BER CORRECTIONS/BASA-BASI. LANGSUNG KELUARKAN OUTPUT JSON SESUAI FORMAT DI ATAS DI DALAM TAG <json_output>.

@@ -34,9 +34,15 @@ class AnnouncementsService:
             )
         
             response = model.generate(prompt)
+            print(f"--- DEBUG DATA DARI AI ---\n{response}\n-------------------------")
             clean = response.replace("```json", "").replace("```", "").strip()
             
-            result = json.loads(clean)
-            return result
+            start_idx = clean.find('{')
+            end_idx = clean.rfind('}')
+
+            if start_idx != -1 and end_idx != -1:
+                clean = clean[start_idx:end_idx + 1]
+            
+            return json.loads(clean)
         except Exception as e:
             raise Exception(f"Failed to create announcement: {str(e)}")
